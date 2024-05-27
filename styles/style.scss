@@ -1,0 +1,147 @@
+@import "color";
+@import "reset";
+@import "mixins";
+@import "sizing";
+@import "fontStyles";
+
+body{
+  background-color: $bodyBackgroundColor;
+}
+
+form{
+    @include centeredFlex;
+    background-color: $formBackgroundColor;
+    margin: 50px auto;
+    max-width: 30%;
+    border-radius: $borderRadius5;
+    padding: $padding10;
+}
+
+.date {
+    display: flex;
+    flex-direction: column;
+    gap: $gap5;
+    margin-bottom: $marginBottom15;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.day_name {
+    font-size: $fontSizeRem;
+}
+
+form > input {
+    @include borderDefault;
+    @include transitionInput;
+    @include boxShadow;
+    padding: $inputPadding;
+    border-radius: $borderRadius50;  
+    outline: none;
+    background-color: $inputBackgroundColor;
+    color: $inputColor;
+    margin-bottom: $marginBottom15;
+    background-image: url(/assets/icon/state-layer.svg);
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-position: 1px center;
+    padding-left: $paddingLeft40;
+}
+
+input::placeholder {
+    color:$inputPlaceholderColor;
+    font-style: $fontStyleItalic;
+}
+
+input:focus {
+    @include boxShadowFocus;
+    @include borderDefault;
+    
+}
+  
+form > h3 {
+    margin-bottom: $marginBottom10;
+  }
+
+form > .entry > input {
+    @include boxShadow;
+    @include transitionInput;
+    @include borderDefault;
+    padding: $inputPadding;
+    border-radius: $borderRadius10;
+    outline: none;
+    background-color: $inputBackgroundColor;
+    color: $inputColor;
+    margin-bottom: $marginBottom15;
+    width: $widthInput;
+    box-sizing: border-box;
+  }
+
+  form > .entry {
+    background-color: $entryBackgroundColor;
+    padding: $padding10;
+    border-radius: $borderRadius10;
+    margin-bottom: $marginBottom10;
+  }
+  
+  form > .entry > .datetime {
+    font-size: $fontSize17;
+    font-weight: $fontWeight999;
+    background-image: url(/assets/icon/calendar_month_24dp.svg);
+    background-clip: padding-box;
+    background-repeat: no-repeat;
+    background-position: 95% center;
+  }
+  
+  input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+  }
+  
+  form > .entry > div {
+    display: flex;
+    justify-content: flex-end;
+    gap: $gap10;
+  }
+  
+  form > .entry > .btn > button,
+  input {
+      @include transitionBtnInput;
+    background-color: $inputAndBtnBackgroundColor;
+    color: $colorBtnAndHover;
+    border: none;
+    padding: $inputPadding;
+    border-radius: $borderRadius5;
+    cursor: pointer;
+  }
+  
+  form > .entry > .btn > button:hover {
+    background-color: $hoverBackgroundColor;
+  }
+  form > .entry > .btn > input:hover {
+    background-color: $hoverBackgroundColor;
+  }
+  
+  .wrapper {
+    display: inline-flex;
+    border-radius: $borderRadius20;
+    overflow: hidden;
+  }
+  
+  input[type="button"] {
+    flex: 1;
+    border: none;
+    background-color: $inputButtonBackgroundColor;
+    padding: $padding10;
+    cursor: pointer;
+    font-size: $fontSize17;
+    border-radius: 0;
+    font-weight:$fontWeight750;
+  }
+  
+  input[type="button"]:not(:last-child) {
+    border-right: 1px solid #000000;
+  }
+  
+  input[type="button"]:hover {
+    background-color: $onlyBtnBackgroundColor;
+    @include transitionBtnHover;
+    color: $colorBtnAndHover;
+  }

@@ -1,0 +1,33 @@
+@mixin centeredFlex {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+    
+@mixin borderDefault{
+   border: 1px solid rgb(177, 141, 229);
+} 
+
+@mixin borderFocus{
+    border: 1px solid rgb(71, 42, 114);
+} 
+
+@mixin boxShadow{
+    box-shadow: 1px 2px 7px 2px rgb(205, 192, 216);
+}
+
+@mixin boxShadowFocus{
+    box-shadow: 1px 2px 4px 2px rgb(230, 224, 235);
+}
+
+@mixin transitionInput{
+    transition: all 0.3s ease;
+}
+
+@mixin transitionBtnInput{
+    transition: background-color 0.3s ease;
+}
+
+@mixin transitionBtnHover{
+    transition: background-color 0.7s ease;
+}

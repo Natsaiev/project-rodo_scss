@@ -1,1 +1,154 @@
-/*# sourceMappingURL=style.css.map */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: #bcb3ff;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  margin: 50px auto;
+  max-width: 30%;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.date {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.day_name {
+  font-size: 1.5rem;
+}
+
+form > input {
+  border: 1px solid rgb(177, 141, 229);
+  transition: all 0.3s ease;
+  box-shadow: 1px 2px 7px 2px rgb(205, 192, 216);
+  padding: 10px 20px;
+  border-radius: 50px;
+  outline: none;
+  background-color: rgb(233, 219, 246);
+  color: rgb(2, 3, 53);
+  margin-bottom: 15px;
+  background-image: url(/assets/icon/state-layer.svg);
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-position: 1px center;
+  padding-left: 40px;
+}
+
+input::-moz-placeholder {
+  color: rgb(86, 13, 155);
+  font-style: italic;
+}
+
+input::placeholder {
+  color: rgb(86, 13, 155);
+  font-style: italic;
+}
+
+input:focus {
+  box-shadow: 1px 2px 4px 2px rgb(230, 224, 235);
+  border: 1px solid rgb(177, 141, 229);
+}
+
+form > h3 {
+  margin-bottom: 10px;
+}
+
+form > .entry > input {
+  box-shadow: 1px 2px 7px 2px rgb(205, 192, 216);
+  transition: all 0.3s ease;
+  border: 1px solid rgb(177, 141, 229);
+  padding: 10px 20px;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgb(233, 219, 246);
+  color: rgb(2, 3, 53);
+  margin-bottom: 15px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form > .entry {
+  background-color: rgba(188, 179, 255, 0.4549019608);
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+form > .entry > .datetime {
+  font-size: 17px;
+  font-weight: 999;
+  background-image: url(/assets/icon/calendar_month_24dp.svg);
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-position: 95% center;
+}
+
+input[type=datetime-local]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+form > .entry > div {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+form > .entry > .btn > button,
+input {
+  transition: background-color 0.3s ease;
+  background-color: rgb(177, 141, 229);
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form > .entry > .btn > button:hover {
+  background-color: #9400d3;
+}
+
+form > .entry > .btn > input:hover {
+  background-color: #9400d3;
+}
+
+.wrapper {
+  display: inline-flex;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+input[type=button] {
+  flex: 1;
+  border: none;
+  background-color: #d8d6d6;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  border-radius: 0;
+  font-weight: 750;
+}
+
+input[type=button]:not(:last-child) {
+  border-right: 1px solid #000000;
+}
+
+input[type=button]:hover {
+  background-color: #bcb3ff;
+  transition: background-color 0.7s ease;
+  color: #ffffff;
+}/*# sourceMappingURL=style.css.map */
