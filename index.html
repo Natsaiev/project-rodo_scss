@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="newTaskForm">
+      <div class="date">
+        <p class="day_name"></p>
+        <p class="day"></p>
+      </div>
+      <input class="search" placeholder="Search..." type="search" />
+
+      <h3>New entry</h3>
+
+      <div class="entry">
+        <input
+          type="text"
+          placeholder="Description"
+          name="Description"
+          class="description"
+        />
+        <input type="text" placeholder="date" name="date" class="datetime" />
+        <div class="btn">
+          <input type="submit" value="Add" />
+          <button class="btn_clear">Clear</button>
+        </div>
+      </div>
+      <h3>To-do list</h3>
+      <div class="wrapper">
+        <input type="button" name="All" value="All" class="button-all" />
+        <input
+          type="button" name="Active" value="Active" class="button-actual"
+        />
+        <input type="button" name="Completed" value="Completed" class="button-completed" />
+      </div>
+      <div class="List">
+        <div class="all_tasks"></div>
+      </div>
+    </form>
+  </body>
+  <script src="scripts/index.js"></script>
+</html>
