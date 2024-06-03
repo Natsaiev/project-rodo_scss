@@ -145,3 +145,11 @@ form > .entry > input {
     @include transitionBtnHover;
     color: $colorBtnAndHover;
   }
+
+
+.all_tasks > .cardDiv {
+  background-color: rgb(250, 250, 182);
+  border: 1px solid black;
+  display: flex;
+  width: $width100;
+}

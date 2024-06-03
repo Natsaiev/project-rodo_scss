@@ -17,10 +17,10 @@
         <p class="day_name"></p>
         <p class="day"></p>
       </div>
-      <input class="search" placeholder="Search..." type="search" />
-
+      <input class="search" name="search" placeholder="Search..." type="search" />
+    
       <h3>New entry</h3>
-
+    
       <div class="entry">
         <input
           type="text"
@@ -28,10 +28,10 @@
           name="Description"
           class="description"
         />
-        <input type="text" placeholder="date" name="date" class="datetime" />
+        <input type="datetime-local" placeholder="date" name="date" class="datetime" />
         <div class="btn">
-          <input type="submit" value="Add" />
-          <button class="btn_clear">Clear</button>
+          <input type="submit" name="submit" value="Add" />
+          <button type="button" class="btn_clear">Clear</button>
         </div>
       </div>
       <h3>To-do list</h3>
@@ -46,6 +46,6 @@
         <div class="all_tasks"></div>
       </div>
     </form>
-  </body>
+    </form>
   <script src="scripts/index.js"></script>
 </html>
