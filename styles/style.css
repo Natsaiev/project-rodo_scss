@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -151,4 +151,27 @@ input[type=button]:hover {
   background-color: #bcb3ff;
   transition: background-color 0.7s ease;
   color: #ffffff;
+}
+
+.all_tasks > .cardDiv {
+  background-color: rgb(250, 250, 182);
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.all_tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.all_tasks > .cardDiv > div > p {
+  font-style: italic;
+  font-size: 17px;
+  font-weight: 750;
 }/*# sourceMappingURL=style.css.map */

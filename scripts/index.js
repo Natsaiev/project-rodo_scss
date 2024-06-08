@@ -40,29 +40,39 @@ form.addEventListener("submit", (event) => {
 });
 
 function createTaskCard(task) {
-  const cardDiv = document.createElement("div");
   const checkbox = document.createElement("input");
+  const cardDiv = document.createElement("div");
+  const cardDivParagraph = document.createElement("div");
   const descriptionCard = document.createElement("p");
   const datetimeCard = document.createElement("p");
-
 
   checkbox.setAttribute("type", "checkbox");
   checkbox.addEventListener("change", (event) => {
     descriptionCard.style.opacity = event.target.checked ? 0.5 : 1;
     descriptionCard.style.textDecoration = event.target.checked ? "line-through" : "none";
+    datetimeCard.style.color = event.target.checked ? "gray" : "black";
   });
-  cardDiv.classList.add("cardDiv")
+
+  cardDiv.classList.add("cardDiv");
   descriptionCard.textContent = task.taskDescription;
   datetimeCard.textContent = task.taskDatetime;
 
-  cardDiv.append(datetimeCard, descriptionCard, checkbox);
+  cardDivParagraph.append(datetimeCard, descriptionCard);
+  cardDiv.append(checkbox, cardDivParagraph);
   allTasksView.append(cardDiv);
 
-  // Добавление обработчика события для удаления div при нажатии клавиши delete
   cardDiv.addEventListener("keydown", (event) => {
     if (event.key === "Delete") {
       cardDiv.remove();
-      // Здесь можно добавить логику удаления задачи из массива `all_tasks` и обновление localStorage
+
+      
+      const taskIndex = all_tasks.findIndex(t => t.id === task.id);  // Логика удаления задачи из массива `all_tasks`
+      if (taskIndex > -1) {
+        all_tasks.splice(taskIndex, 1);
+      }
+
+      
+      localStorage.setItem('all_tasks', JSON.stringify(all_tasks));  // Обновление localStorage
     }
   });
 }
